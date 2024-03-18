@@ -1,0 +1,25 @@
+[package]
+name = "gbiz-info-api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["uiuifree"]
+description = "gBizInfo APIをRust利用するためのライブラリ"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+keywords = ["gBizINFO"]
+readme="README.md"
+
+[dependencies]
+reqwest ={version="~0",features=["json"]}
+
+# Json
+serde = { version = "~1", features = ["derive"] }
+serde_json = "~1"
+log = "0.4.21"
+
+[dev-dependencies]
+tokio = { version = "~1", features = ["full"] }
+dotenv = "0.15.0"
